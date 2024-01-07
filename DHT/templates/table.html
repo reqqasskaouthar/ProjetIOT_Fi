@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block  %}
+<div class="projects">
+  <div class ="tables" >
+<table  border="0">
+
+    <thead class="DIV">
+        <tr>
+            <th>id</th>
+            <th>Temperature</th>
+            <th>Humidity</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for record in data %}
+        <tr>
+            <td>{{ record.id }}</td>
+            <td>{{ record.temp }}</td>
+            <td>{{ record.hum }}</td>
+        </tr>
+
+    </tbody>
+
+</table>
+
+</div>
+  </div>
+  {% endfor %}
